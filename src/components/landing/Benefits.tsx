@@ -1,36 +1,36 @@
 import { motion } from "framer-motion";
-import { Video, BookOpen, MessageCircle, Trophy, Zap, Heart } from "lucide-react";
+import { Users, MessageCircle, Target, Calendar, Radio, Sparkles } from "lucide-react";
 
 const benefits = [
   {
-    icon: Video,
-    title: "Weekly Live Calls",
-    description: "Join live Q&A sessions and workshops with experts who've been where you want to go.",
-  },
-  {
-    icon: BookOpen,
-    title: "Exclusive Courses",
-    description: "Access our full library of step-by-step courses designed to get you results fast.",
+    icon: Users,
+    title: "Like-Minded Tribe",
+    description: "You're not doing this alone. Connect with members walking the same 3-phase path who hold space for your evolution.",
   },
   {
     icon: MessageCircle,
-    title: "Active Community",
-    description: "Connect with like-minded people who support and motivate each other daily.",
+    title: "Real-Time Support",
+    description: "Get your questions answered, share wins, ask for help — this is where breakthroughs happen.",
   },
   {
-    icon: Trophy,
-    title: "Proven Frameworks",
-    description: "Skip the guesswork with battle-tested strategies that actually work.",
+    icon: Target,
+    title: "Goal-Specific Threads",
+    description: "Focus on weight loss, healing HSV, resetting hormones — guided threads to help you dial in and stay locked in.",
   },
   {
-    icon: Zap,
-    title: "Actionable Content",
-    description: "No fluff. Every piece of content is designed to help you take immediate action.",
+    icon: Calendar,
+    title: "Daily Prompts & Check-Ins",
+    description: "Designed to keep you consistent, aware, and in motion every single day.",
   },
   {
-    icon: Heart,
-    title: "Personal Support",
-    description: "Get your questions answered and receive personalized feedback on your progress.",
+    icon: Radio,
+    title: "Live Events & Challenges",
+    description: "Be the first to know when we drop new challenges, go live, or feature a guest speaker.",
+  },
+  {
+    icon: Sparkles,
+    title: "Ancestral Wisdom",
+    description: "Access indigenous medicinal knowledge passed down through generations — medicine as the blood of Mother Earth.",
   },
 ];
 
@@ -46,12 +46,12 @@ const Benefits = () => {
           className="text-center mb-16"
         >
           <h2 className="font-display text-3xl md:text-5xl font-bold mb-4">
-            Everything You Need to{" "}
-            <span className="text-gradient-primary">Succeed</span>
+            What You Get{" "}
+            <span className="text-gradient-primary">Inside SOLIFIC</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Our community gives you the tools, knowledge, and support system 
-            to accelerate your journey and achieve your goals faster.
+            Transform your mind + body with guided healing, proven systems, 
+            and high-vibe support. This is where real change begins.
           </p>
         </motion.div>
 

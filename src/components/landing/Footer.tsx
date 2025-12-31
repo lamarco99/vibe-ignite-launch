@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Circle, Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -13,23 +14,36 @@ const Footer = () => {
         >
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-primary flex items-center justify-center">
-              <span className="font-display font-bold text-primary-foreground">C</span>
+            <div className="w-8 h-8 rounded-full bg-gradient-primary flex items-center justify-center">
+              <Circle className="w-4 h-4 text-primary-foreground" strokeWidth={3} />
             </div>
-            <span className="font-display font-semibold text-lg">Community</span>
+            <span className="font-display font-semibold text-lg">SOLIFIC</span>
           </div>
 
           {/* Links */}
           <nav className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
-            <a href="#" className="hover:text-foreground transition-colors">Terms</a>
-            <a href="#" className="hover:text-foreground transition-colors">Privacy</a>
-            <a href="#" className="hover:text-foreground transition-colors">Contact</a>
-            <a href="#" className="hover:text-foreground transition-colors">FAQ</a>
+            <a 
+              href="https://www.skool.com/solific-indigenous-healing-8967" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-foreground transition-colors"
+            >
+              Join Community
+            </a>
+            <a 
+              href="https://www.instagram.com/_iamlamarco" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-foreground transition-colors flex items-center gap-1"
+            >
+              <Instagram className="w-4 h-4" />
+              @_iamlamarco
+            </a>
           </nav>
 
           {/* Copyright */}
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Community. All rights reserved.
+            © {new Date().getFullYear()} SOLIFIC. All rights reserved.
           </p>
         </motion.div>
       </div>
