@@ -1,15 +1,21 @@
 import { motion } from "framer-motion";
-import { Check } from "lucide-react";
+import { Check, Leaf } from "lucide-react";
+
+const healingGoals = [
+  { goal: "Weight Loss", desc: "Shed pounds naturally through detox protocols" },
+  { goal: "HSV Healing", desc: "Address symptoms with holistic approaches" },
+  { goal: "Hormone Reset", desc: "Balance your system without prescriptions" },
+];
 
 const features = [
-  "Access to all courses and masterclasses",
-  "Weekly live Q&A calls with experts",
-  "Private community chat and networking",
-  "Exclusive resources and templates",
-  "Monthly challenges and accountability",
-  "Direct access to mentors and coaches",
-  "Member-only events and workshops",
-  "Lifetime access to new content",
+  "3-Phase guided system: Detox, Restore, Maintain",
+  "Private community of action-takers",
+  "Goal-specific healing threads",
+  "Daily prompts to keep you consistent",
+  "Live events and challenge access",
+  "Direct support from LaMarco Collins",
+  "Indigenous medicinal knowledge",
+  "No prescriptions. No confusion.",
 ];
 
 const WhatYouGet = () => {
@@ -28,15 +34,14 @@ const WhatYouGet = () => {
             transition={{ duration: 0.5 }}
           >
             <h2 className="font-display text-3xl md:text-5xl font-bold mb-6">
-              What You Get When You{" "}
-              <span className="text-gradient-primary">Join Today</span>
+              The <span className="text-gradient-primary">3-Phase Path</span> to Natural Healing
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Everything is designed to help you take action and see real results. 
-              No overwhelming content, just what you need to succeed.
+              No fluff. No hand-holding. Just a proven system for those ready to lock in, 
+              build discipline, and transform with us.
             </p>
 
-            <div className="grid sm:grid-cols-2 gap-4">
+            <div className="grid sm:grid-cols-2 gap-4 mb-10">
               {features.map((feature, index) => (
                 <motion.div
                   key={feature}
@@ -55,29 +60,52 @@ const WhatYouGet = () => {
             </div>
           </motion.div>
 
-          {/* Right side - visual */}
+          {/* Right side - healing goals */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="relative"
+            className="space-y-6"
           >
-            <div className="aspect-square rounded-3xl bg-gradient-card border border-border/50 p-8 relative overflow-hidden">
-              {/* Decorative elements */}
-              <div className="absolute top-8 right-8 w-20 h-20 rounded-2xl bg-primary/10 animate-float" />
-              <div className="absolute bottom-12 left-8 w-16 h-16 rounded-xl bg-accent/10 animate-float" style={{ animationDelay: "1s" }} />
-              
-              <div className="relative z-10 h-full flex flex-col justify-center items-center text-center">
-                <div className="w-24 h-24 rounded-full bg-gradient-primary flex items-center justify-center mb-6 glow-primary animate-pulse-glow">
-                  <span className="font-display text-3xl font-bold text-primary-foreground">2.5K+</span>
+            <div className="p-6 rounded-2xl bg-gradient-card border border-border/50">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+                  <Leaf className="w-5 h-5 text-primary" />
                 </div>
-                <h3 className="font-display text-2xl font-bold mb-2">Active Members</h3>
-                <p className="text-muted-foreground max-w-xs">
-                  Join a growing community of achievers who are taking their skills to the next level
-                </p>
+                <h3 className="font-display text-xl font-semibold">Healing Focus Areas</h3>
+              </div>
+              
+              <div className="space-y-4">
+                {healingGoals.map((item, index) => (
+                  <motion.div
+                    key={item.goal}
+                    initial={{ opacity: 0, x: 10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.3, delay: 0.3 + index * 0.1 }}
+                    className="p-4 rounded-xl bg-secondary/50 border border-border/30"
+                  >
+                    <p className="font-display font-semibold text-primary mb-1">{item.goal}</p>
+                    <p className="text-sm text-muted-foreground">{item.desc}</p>
+                  </motion.div>
+                ))}
               </div>
             </div>
+
+            {/* Quote */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="p-6 rounded-2xl bg-gradient-earth border border-accent/20"
+            >
+              <p className="text-lg italic text-foreground/90 mb-3">
+                "Medicine is the blood of Mother Earth — healing the spiritual, emotional, and physical as one."
+              </p>
+              <p className="text-sm text-accent font-medium">— Indigenous Wisdom</p>
+            </motion.div>
           </motion.div>
         </div>
       </div>
