@@ -37,96 +37,47 @@ const CTA = () => {
             Detox. Restore. Maintain. Your transformation begins now.
           </p>
 
-          {/* Pricing Cards */}
-          <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto mb-10">
-            {/* Tier 1 - Community Access */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="p-8 rounded-3xl bg-gradient-card border border-border"
+          {/* Single Membership Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="p-8 rounded-3xl bg-gradient-card border border-primary/30 glow-primary max-w-md mx-auto mb-10"
+          >
+            <p className="text-muted-foreground mb-2 text-sm font-medium uppercase tracking-wide">Community Membership</p>
+            <div className="flex items-baseline justify-center gap-1 mb-2">
+              <span className="font-display text-4xl font-bold text-foreground">$25</span>
+              <span className="text-muted-foreground">/month</span>
+            </div>
+            <p className="text-sm text-muted-foreground mb-6">Full access to the SOLIFIC community</p>
+            
+            <ul className="text-left space-y-3 mb-6">
+              <li className="flex items-center gap-2 text-sm text-muted-foreground">
+                <Leaf className="w-4 h-4 text-primary flex-shrink-0" />
+                Access to all community content
+              </li>
+              <li className="flex items-center gap-2 text-sm text-muted-foreground">
+                <Users className="w-4 h-4 text-primary flex-shrink-0" />
+                Group discussions & support
+              </li>
+              <li className="flex items-center gap-2 text-sm text-muted-foreground">
+                <Shield className="w-4 h-4 text-primary flex-shrink-0" />
+                3-Phase healing protocols
+              </li>
+            </ul>
+            
+            <Button 
+              size="lg" 
+              className="w-full group py-6 text-base bg-gradient-primary hover:opacity-90 transition-opacity"
+              asChild
             >
-              <p className="text-muted-foreground mb-2 text-sm font-medium uppercase tracking-wide">Community Access</p>
-              <div className="flex items-baseline justify-center gap-1 mb-2">
-                <span className="font-display text-4xl font-bold text-foreground">$25</span>
-                <span className="text-muted-foreground">/month</span>
-              </div>
-              <p className="text-sm text-muted-foreground mb-6">Full community access</p>
-              
-              <ul className="text-left space-y-3 mb-6">
-                <li className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <Leaf className="w-4 h-4 text-primary flex-shrink-0" />
-                  Access to all community content
-                </li>
-                <li className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <Users className="w-4 h-4 text-primary flex-shrink-0" />
-                  Group discussions & support
-                </li>
-                <li className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <Shield className="w-4 h-4 text-primary flex-shrink-0" />
-                  3-Phase healing protocols
-                </li>
-              </ul>
-              
-              <Button 
-                size="lg" 
-                variant="outline"
-                className="w-full group py-6 text-base border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-                asChild
-              >
-                <a href="https://www.skool.com/solific-indigenous-healing-8967/about?ref=2de346fab275408bb508fc6120b7ba24" target="_blank" rel="noopener noreferrer">
-                  Get Started
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </a>
-              </Button>
-            </motion.div>
-
-            {/* Tier 2 - VIP Access */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="p-8 rounded-3xl bg-gradient-card border border-primary/30 glow-primary relative"
-            >
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-xs font-bold px-4 py-1 rounded-full">
-                MOST POPULAR
-              </div>
-              <p className="text-muted-foreground mb-2 text-sm font-medium uppercase tracking-wide">VIP Access</p>
-              <div className="flex items-baseline justify-center gap-1 mb-2">
-                <span className="font-display text-4xl font-bold text-foreground">$99</span>
-                <span className="text-muted-foreground">/month</span>
-              </div>
-              <p className="text-sm text-muted-foreground mb-6">Everything + 1-on-1 support</p>
-              
-              <ul className="text-left space-y-3 mb-6">
-                <li className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <Leaf className="w-4 h-4 text-primary flex-shrink-0" />
-                  Everything in Community Access
-                </li>
-                <li className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <Users className="w-4 h-4 text-primary flex-shrink-0" />
-                  <strong className="text-foreground">Direct 1-on-1 messaging</strong>
-                </li>
-                <li className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <Shield className="w-4 h-4 text-primary flex-shrink-0" />
-                  Personalized guidance
-                </li>
-              </ul>
-              
-              <Button 
-                size="lg" 
-                className="w-full group py-6 text-base bg-gradient-primary hover:opacity-90 transition-opacity"
-                asChild
-              >
-                <a href="https://www.skool.com/solific-indigenous-healing-8967/about?ref=2de346fab275408bb508fc6120b7ba24" target="_blank" rel="noopener noreferrer">
-                  Join VIP
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </a>
-              </Button>
-            </motion.div>
-          </div>
+              <a href="https://www.skool.com/solific-indigenous-healing-8967/about?ref=2de346fab275408bb508fc6120b7ba24" target="_blank" rel="noopener noreferrer">
+                Join the Community
+                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </a>
+            </Button>
+          </motion.div>
 
           {/* Trust badges */}
           <motion.div
