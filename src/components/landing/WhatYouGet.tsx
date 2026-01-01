@@ -2,15 +2,16 @@ import { motion } from "framer-motion";
 import { Check, Leaf } from "lucide-react";
 
 const healingGoals = [
+  { goal: "HSV / STDs", desc: "Natural protocols to support your body's healing" },
+  { goal: "Cancer", desc: "Holistic approaches to complement your journey" },
+  { goal: "Diabetes & High Blood Pressure", desc: "Reset your system without prescriptions" },
   { goal: "Weight Loss", desc: "Shed pounds naturally through detox protocols" },
-  { goal: "HSV Healing", desc: "Address symptoms with holistic approaches" },
-  { goal: "Hormone Reset", desc: "Balance your system without prescriptions" },
 ];
 
 const features = [
   "3-Phase guided system: Detox, Restore, Maintain",
   "Private community of action-takers",
-  "Goal-specific healing threads",
+  "Condition-specific reversal plans",
   "Daily prompts to keep you consistent",
   "Live events and challenge access",
   "Direct support from LaMarco Collins",
@@ -73,7 +74,7 @@ const WhatYouGet = () => {
                 <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
                   <Leaf className="w-5 h-5 text-primary" />
                 </div>
-                <h3 className="font-display text-xl font-semibold">Healing Focus Areas</h3>
+                <h3 className="font-display text-xl font-semibold">Reversal Plans</h3>
               </div>
               
               <div className="space-y-4">

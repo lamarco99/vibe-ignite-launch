@@ -14,8 +14,8 @@ const benefits = [
   },
   {
     icon: Target,
-    title: "Goal-Specific Threads",
-    description: "Focus on weight loss, healing HSV, resetting hormones — guided threads to help you dial in and stay locked in.",
+    title: "Reversal Plans",
+    description: "HSV/STDs, Cancer, Diabetes, High Blood Pressure, Weight Loss — specific protocols to help you heal and stay locked in.",
   },
   {
     icon: Calendar,
