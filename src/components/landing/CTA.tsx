@@ -75,7 +75,7 @@ const CTA = () => {
                 className="w-full group py-6 text-base border-primary text-primary hover:bg-primary hover:text-primary-foreground"
                 asChild
               >
-                <a href="https://www.skool.com/solific-indigenous-healing-8967" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.skool.com/solific-indigenous-healing-8967/about?ref=2de346fab275408bb508fc6120b7ba24" target="_blank" rel="noopener noreferrer">
                   Get Started
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </a>
@@ -120,7 +120,7 @@ const CTA = () => {
                 className="w-full group py-6 text-base bg-gradient-primary hover:opacity-90 transition-opacity"
                 asChild
               >
-                <a href="https://www.skool.com/solific-indigenous-healing-8967" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.skool.com/solific-indigenous-healing-8967/about?ref=2de346fab275408bb508fc6120b7ba24" target="_blank" rel="noopener noreferrer">
                   Join VIP
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </a>
