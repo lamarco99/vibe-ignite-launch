@@ -88,7 +88,7 @@ const Hero = () => {
               asChild
             >
               <a href="https://www.skool.com/solific-indigenous-healing-8967" target="_blank" rel="noopener noreferrer">
-                Join the Tribe — Free
+                Join the Tribe
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>
