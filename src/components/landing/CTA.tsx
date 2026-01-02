@@ -72,7 +72,7 @@ const CTA = () => {
               className="w-full group py-6 text-base bg-gradient-primary hover:opacity-90 transition-opacity"
               asChild
             >
-              <a href="https://www.skool.com/solific-indigenous-healing-8967/about?ref=2de346fab275408bb508fc6120b7ba24" target="_blank" rel="noopener noreferrer">
+              <a href="https://buy.stripe.com/bJefZi2vYcps8ZQ0ZJb7y00" target="_blank" rel="noopener noreferrer">
                 Join the Community
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
