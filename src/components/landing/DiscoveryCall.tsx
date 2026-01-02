@@ -32,14 +32,14 @@ const DiscoveryCall = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="max-w-xl mx-auto"
+          className="max-w-2xl mx-auto rounded-3xl overflow-hidden bg-gradient-card border border-border shadow-2xl"
         >
           <iframe
             id="JotFormIFrame-260014199299059"
             title="Discovery Call Intake Form"
             src="https://form.jotform.com/260014199299059"
-            style={{ minWidth: "100%", height: "600px", border: "none" }}
-            scrolling="no"
+            className="w-full min-h-[700px] md:min-h-[650px]"
+            style={{ border: "none" }}
             allow="geolocation; microphone; camera; fullscreen"
           />
         </motion.div>
