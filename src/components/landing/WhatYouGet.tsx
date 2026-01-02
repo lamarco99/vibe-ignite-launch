@@ -21,7 +21,7 @@ const features = [
 
 const WhatYouGet = () => {
   return (
-    <section className="py-24 md:py-32 relative overflow-hidden">
+    <section id="what-you-get" className="py-24 md:py-32 relative overflow-hidden">
       {/* Background accent */}
       <div className="absolute inset-0 bg-gradient-hero opacity-50" />
       

@@ -92,7 +92,12 @@ const Hero = () => {
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>
-            <Button size="lg" variant="outline" className="px-8 py-6 text-lg border-muted-foreground/30 hover:bg-secondary">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="px-8 py-6 text-lg border-muted-foreground/30 hover:bg-secondary"
+              onClick={() => document.getElementById('what-you-get')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               See How It Works
             </Button>
           </motion.div>
