@@ -23,7 +23,7 @@ const DiscoveryCall = () => {
             Request a <span className="text-gradient-primary">Discovery Call</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Submit this intake form. You'll receive a qualification call before a discovery call is scheduled.
+            Submit this intake form. Check your email for the next steps.
           </p>
         </motion.div>
 
