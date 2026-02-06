@@ -23,12 +23,11 @@ const Footer = () => {
           {/* Links */}
           <nav className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
             <a 
-              href="https://www.skool.com/solific-indigenous-healing-8967/about?ref=2de346fab275408bb508fc6120b7ba24" 
-              target="_blank" 
-              rel="noopener noreferrer"
+              href="#discovery-call"
+              onClick={(e) => { e.preventDefault(); document.getElementById('discovery-call')?.scrollIntoView({ behavior: 'smooth' }); }}
               className="hover:text-foreground transition-colors"
             >
-              Join Community
+              Book a Call
             </a>
             <a 
               href="https://www.instagram.com/_iamlamarco" 

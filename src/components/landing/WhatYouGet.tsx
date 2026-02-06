@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Check, Leaf } from "lucide-react";
+import { Check, Leaf, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const healingGoals = [
   { goal: "HSV / STDs", desc: "Natural protocols to support your body's healing" },
@@ -109,6 +110,24 @@ const WhatYouGet = () => {
             </motion.div>
           </motion.div>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="text-center mt-16"
+        >
+          <p className="text-lg text-muted-foreground mb-4">Ready to see if this is right for you?</p>
+          <Button
+            size="lg"
+            className="group px-8 py-6 text-lg bg-gradient-primary glow-primary hover:opacity-90 transition-opacity"
+            onClick={() => document.getElementById('discovery-call')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            Book Your Discovery Call
+            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          </Button>
+        </motion.div>
       </div>
     </section>
   );

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Quote, Star, ChevronLeft, ChevronRight } from "lucide-react";
+import { Quote, Star, ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import {
   Carousel,
   CarouselContent,
@@ -141,6 +142,24 @@ const Testimonials = () => {
             <CarouselNext className="static translate-y-0" />
           </div>
         </Carousel>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="text-center mt-12"
+        >
+          <p className="text-lg text-muted-foreground mb-4">Your transformation story starts here.</p>
+          <Button
+            size="lg"
+            className="group px-8 py-6 text-lg bg-gradient-primary glow-primary hover:opacity-90 transition-opacity"
+            onClick={() => document.getElementById('discovery-call')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            Book Your Discovery Call Now
+            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          </Button>
+        </motion.div>
       </div>
     </section>
   );
