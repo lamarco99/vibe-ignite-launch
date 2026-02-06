@@ -85,12 +85,10 @@ const Hero = () => {
             <Button 
               size="lg" 
               className="group px-8 py-6 text-lg bg-gradient-primary glow-primary hover:opacity-90 transition-opacity"
-              asChild
+              onClick={() => document.getElementById('discovery-call')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              <a href="https://buy.stripe.com/8x2fZi1rU4X03Fw37Rb7y03" target="_blank" rel="noopener noreferrer">
-                Join the Tribe
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </a>
+              Book a Discovery Call
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button 
               size="lg" 

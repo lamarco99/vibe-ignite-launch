@@ -3,7 +3,7 @@ import { Phone } from "lucide-react";
 
 const DiscoveryCall = () => {
   return (
-    <section className="py-24 md:py-32 relative overflow-hidden">
+    <section id="discovery-call" className="py-24 md:py-32 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-hero opacity-50" />
       
       <div className="container px-4 relative z-10">
