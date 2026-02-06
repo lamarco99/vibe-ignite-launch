@@ -29,12 +29,12 @@ const CTA = () => {
           </div>
 
           <h2 className="font-display text-3xl md:text-5xl font-bold mb-6">
-            Ready to{" "}
-            <span className="text-gradient-primary">Transform Naturally?</span>
+            Not Ready for a Call?{" "}
+            <span className="text-gradient-primary">Join the Community.</span>
           </h2>
           <p className="text-lg text-muted-foreground mb-10 max-w-xl mx-auto">
-            Join SOLIFIC today and start your journey through the 3-phase path. 
-            Detox. Restore. Maintain. Your transformation begins now.
+            Start learning and connecting while you prepare. Get access to the SOLIFIC 
+            community for just $25/month — no call required.
           </p>
 
           {/* Single Membership Card */}

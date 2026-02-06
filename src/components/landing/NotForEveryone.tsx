@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { X, Check } from "lucide-react";
+import { X, Check, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const notFor = [
   "Looking for hand-holding or to be saved",
@@ -97,6 +98,24 @@ const NotForEveryone = () => {
             </div>
           </motion.div>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="text-center mt-12"
+        >
+          <p className="font-display text-xl font-semibold text-foreground mb-4">Sound like you? Let's talk.</p>
+          <Button
+            size="lg"
+            className="group px-8 py-6 text-lg bg-gradient-primary glow-primary hover:opacity-90 transition-opacity"
+            onClick={() => document.getElementById('discovery-call')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            Apply for a Discovery Call
+            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          </Button>
+        </motion.div>
       </div>
     </section>
   );

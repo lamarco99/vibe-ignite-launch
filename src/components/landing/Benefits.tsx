@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Users, MessageCircle, Target, Calendar, Radio, Sparkles } from "lucide-react";
+import { Users, MessageCircle, Target, Calendar, Radio, Sparkles, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const benefits = [
   {
@@ -77,6 +78,24 @@ const Benefits = () => {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="text-center mt-12"
+        >
+          <Button
+            size="lg"
+            className="group px-8 py-6 text-lg bg-gradient-primary glow-primary hover:opacity-90 transition-opacity"
+            onClick={() => document.getElementById('discovery-call')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            Start With a Discovery Call
+            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          </Button>
+          <p className="text-sm text-muted-foreground mt-3">Free intake form — no commitment required</p>
+        </motion.div>
       </div>
     </section>
   );
