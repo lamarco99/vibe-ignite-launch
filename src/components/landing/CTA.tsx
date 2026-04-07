@@ -1,14 +1,15 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Shield, Users, Leaf, Circle } from "lucide-react";
+import { ArrowRight, Shield, Users, Leaf } from "lucide-react";
+
+const PREORDER_URL = "https://SHOPIFY_CHECKOUT_LINK_HERE";
 
 const CTA = () => {
   return (
     <section className="py-24 md:py-32 relative overflow-hidden">
-      {/* Background */}
       <div className="absolute inset-0 bg-gradient-hero" />
       <motion.div
-        className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-primary/10 blur-3xl"
+        className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-primary/5 blur-3xl"
         animate={{ scale: [1, 1.2, 1] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -21,63 +22,31 @@ const CTA = () => {
           transition={{ duration: 0.5 }}
           className="max-w-3xl mx-auto text-center"
         >
-          {/* Logo */}
-          <div className="flex items-center justify-center gap-3 mb-8">
-            <div className="w-16 h-16 rounded-full bg-gradient-primary flex items-center justify-center glow-primary">
-              <Circle className="w-8 h-8 text-primary-foreground" strokeWidth={3} />
-            </div>
-          </div>
-
+          <p className="text-xs uppercase tracking-[0.25em] text-primary/80 mb-4 font-medium">
+            Don't Miss Out
+          </p>
           <h2 className="font-display text-3xl md:text-5xl font-bold mb-6">
-            Not Ready for a Call?{" "}
-            <span className="text-gradient-primary">Join the Community.</span>
+            Start Your Healing{" "}
+            <span className="text-gradient-primary">Journey Today</span>
           </h2>
           <p className="text-lg text-muted-foreground mb-10 max-w-xl mx-auto">
-            Start learning and connecting while you prepare. Get access to the SOLIFIC 
-            community for just $25/month — no call required.
+            SOLIFIC Life Capsules are available for pre-order now. Secure your bottle 
+            before the first batch sells out.
           </p>
 
-          {/* Single Membership Card */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="p-8 rounded-3xl bg-gradient-card border border-primary/30 glow-primary max-w-md mx-auto mb-10"
+          <Button 
+            size="lg" 
+            className="group px-12 py-7 text-lg bg-gradient-primary glow-primary hover:opacity-90 transition-opacity font-semibold"
+            asChild
           >
-            <p className="text-muted-foreground mb-2 text-sm font-medium uppercase tracking-wide">Community Membership</p>
-            <div className="flex items-baseline justify-center gap-1 mb-2">
-              <span className="font-display text-4xl font-bold text-foreground">$25</span>
-              <span className="text-muted-foreground">/month</span>
-            </div>
-            <p className="text-sm text-muted-foreground mb-6">Full access to the SOLIFIC community</p>
-            
-            <ul className="text-left space-y-3 mb-6">
-              <li className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Leaf className="w-4 h-4 text-primary flex-shrink-0" />
-                Access to all community content
-              </li>
-              <li className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Users className="w-4 h-4 text-primary flex-shrink-0" />
-                Group discussions & support
-              </li>
-              <li className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Shield className="w-4 h-4 text-primary flex-shrink-0" />
-                3-Phase healing protocols
-              </li>
-            </ul>
-            
-            <Button 
-              size="lg" 
-              className="w-full group py-6 text-base bg-gradient-primary hover:opacity-90 transition-opacity"
-              asChild
-            >
-              <a href="https://buy.stripe.com/8x2fZi1rU4X03Fw37Rb7y03" target="_blank" rel="noopener noreferrer">
-                Join the Community
-                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </a>
-            </Button>
-          </motion.div>
+            <a href={PREORDER_URL} target="_blank" rel="noopener noreferrer">
+              Pre-Order Now
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </a>
+          </Button>
+          <p className="text-sm text-primary/70 mt-4 font-medium">
+            Limited first batch available
+          </p>
 
           {/* Trust badges */}
           <motion.div
@@ -85,19 +54,19 @@ const CTA = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex flex-wrap justify-center gap-8"
+            className="flex flex-wrap justify-center gap-8 mt-12"
           >
             <div className="flex items-center gap-2 text-muted-foreground">
               <Shield className="w-5 h-5 text-primary" />
-              <span className="text-sm">Private & Safe</span>
-            </div>
-            <div className="flex items-center gap-2 text-muted-foreground">
-              <Users className="w-5 h-5 text-primary" />
-              <span className="text-sm">Active Community</span>
+              <span className="text-sm">100% Natural</span>
             </div>
             <div className="flex items-center gap-2 text-muted-foreground">
               <Leaf className="w-5 h-5 text-primary" />
-              <span className="text-sm">100% Natural</span>
+              <span className="text-sm">Vegan Formula</span>
+            </div>
+            <div className="flex items-center gap-2 text-muted-foreground">
+              <Users className="w-5 h-5 text-primary" />
+              <span className="text-sm">Trusted by Thousands</span>
             </div>
           </motion.div>
         </motion.div>

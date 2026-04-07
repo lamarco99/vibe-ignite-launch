@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Circle, Instagram } from "lucide-react";
+import { Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -12,35 +12,36 @@ const Footer = () => {
           transition={{ duration: 0.5 }}
           className="flex flex-col md:flex-row items-center justify-between gap-6"
         >
-          {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-full bg-gradient-primary flex items-center justify-center">
-              <Circle className="w-4 h-4 text-primary-foreground" strokeWidth={3} />
-            </div>
-            <span className="font-display font-semibold text-lg">SOLIFIC</span>
+            <span className="font-display font-bold text-xl text-gradient-primary">SOLIFIC</span>
           </div>
 
-          {/* Links */}
           <nav className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
             <a 
-              href="#discovery-call"
-              onClick={(e) => { e.preventDefault(); document.getElementById('discovery-call')?.scrollIntoView({ behavior: 'smooth' }); }}
-              className="hover:text-foreground transition-colors"
+              href="#product-details"
+              onClick={(e) => { e.preventDefault(); document.getElementById('product-details')?.scrollIntoView({ behavior: 'smooth' }); }}
+              className="hover:text-primary transition-colors"
             >
-              Book a Call
+              Product
+            </a>
+            <a 
+              href="#consultation"
+              onClick={(e) => { e.preventDefault(); document.getElementById('consultation')?.scrollIntoView({ behavior: 'smooth' }); }}
+              className="hover:text-primary transition-colors"
+            >
+              Consultation
             </a>
             <a 
               href="https://www.instagram.com/_iamlamarco" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="hover:text-foreground transition-colors flex items-center gap-1"
+              className="hover:text-primary transition-colors flex items-center gap-1"
             >
               <Instagram className="w-4 h-4" />
               @_iamlamarco
             </a>
           </nav>
 
-          {/* Copyright */}
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} SOLIFIC. All rights reserved.
           </p>
