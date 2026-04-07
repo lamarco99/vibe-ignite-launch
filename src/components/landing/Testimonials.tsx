@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Quote, Star, ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
+import { Quote, Star, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Carousel,
@@ -8,6 +8,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+
+const PREORDER_URL = "https://SHOPIFY_CHECKOUT_LINK_HERE";
 
 const testimonials = [
   {
@@ -93,13 +95,7 @@ const Testimonials = () => {
           </p>
         </motion.div>
 
-        <Carousel
-          opts={{
-            align: "start",
-            loop: true,
-          }}
-          className="w-full"
-        >
+        <Carousel opts={{ align: "start", loop: true }} className="w-full">
           <CarouselContent className="-ml-4">
             {testimonials.map((testimonial, index) => (
               <CarouselItem key={testimonial.name} className="pl-4 md:basis-1/2 lg:basis-1/3">
@@ -111,11 +107,7 @@ const Testimonials = () => {
                   className="h-full p-6 rounded-2xl bg-gradient-card border border-border/50 flex flex-col"
                 >
                   <Quote className="w-10 h-10 text-primary/30 mb-4" />
-                  
-                  <p className="text-foreground/90 mb-6 flex-1">
-                    "{testimonial.content}"
-                  </p>
-
+                  <p className="text-foreground/90 mb-6 flex-1">"{testimonial.content}"</p>
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-full bg-gradient-primary flex items-center justify-center">
                       <span className="text-sm font-semibold text-primary-foreground">
@@ -127,10 +119,9 @@ const Testimonials = () => {
                       <p className="text-sm text-primary">{testimonial.result}</p>
                     </div>
                   </div>
-
                   <div className="flex gap-1">
                     {Array.from({ length: testimonial.rating }).map((_, i) => (
-                      <Star key={i} className="w-4 h-4 text-accent fill-accent" />
+                      <Star key={i} className="w-4 h-4 text-primary fill-primary" />
                     ))}
                   </div>
                 </motion.div>
@@ -138,8 +129,8 @@ const Testimonials = () => {
             ))}
           </CarouselContent>
           <div className="flex justify-center gap-4 mt-8">
-            <CarouselPrevious className="static translate-y-0" />
-            <CarouselNext className="static translate-y-0" />
+            <CarouselPrevious className="static translate-y-0 border-primary/30 text-foreground hover:bg-primary/10" />
+            <CarouselNext className="static translate-y-0 border-primary/30 text-foreground hover:bg-primary/10" />
           </div>
         </Carousel>
 
@@ -150,14 +141,15 @@ const Testimonials = () => {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="text-center mt-12"
         >
-          <p className="text-lg text-muted-foreground mb-4">Your transformation story starts here.</p>
           <Button
             size="lg"
-            className="group px-8 py-6 text-lg bg-gradient-primary glow-primary hover:opacity-90 transition-opacity"
-            onClick={() => document.getElementById('discovery-call')?.scrollIntoView({ behavior: 'smooth' })}
+            className="group px-10 py-7 text-lg bg-gradient-primary glow-primary hover:opacity-90 transition-opacity font-semibold"
+            asChild
           >
-            Book Your Discovery Call Now
-            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <a href={PREORDER_URL} target="_blank" rel="noopener noreferrer">
+              Pre-Order Life Capsules
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </a>
           </Button>
         </motion.div>
       </div>
