@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, Users, Leaf } from "lucide-react";
 
-const PREORDER_URL = "https://SHOPIFY_CHECKOUT_LINK_HERE";
+const PREORDER_URL = "https://square.link/u/VqiokCZP";
 
 const CTA = () => {
   return (
