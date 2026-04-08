@@ -9,7 +9,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-const PREORDER_URL = "https://SHOPIFY_CHECKOUT_LINK_HERE";
+const PREORDER_URL = "https://square.link/u/VqiokCZP";
 
 const testimonials = [
   {

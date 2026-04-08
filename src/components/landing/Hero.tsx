@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import lifeCapsules from "@/assets/life-capsules.jpeg";
 
-const PREORDER_URL = "https://SHOPIFY_CHECKOUT_LINK_HERE";
+const PREORDER_URL = "https://square.link/u/VqiokCZP";
 
 const Hero = () => {
   return (
